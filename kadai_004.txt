@@ -1,0 +1,32 @@
+PS C:\Users\owner\git_tutorial> cd C:\Users\owner\
+PS C:\Users\owner> mkdir git?challenge
+mkdir : パスに無効な文字が含まれています。
+発生場所 行:1 文字:1
++ mkdir git?challenge
++ ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\Users\owner\git?challenge:String) [New-Item]、ArgumentException
+    + FullyQualifiedErrorId : CreateDirectoryArgumentError,Microsoft.PowerShell.Commands.NewItemCommand
+
+    ディレクトリ: C:\Users\owner
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        2023/11/26     13:08                git_challenge
+
+PS C:\Users\owner\git_challenge> git init
+Initialized empty Git repository in C:/Users/owner/git_challenge/.git/
+
+PS C:\Users\owner\git_challenge> echo "Hello, world!" >> hello_world.txt
+
+PS C:\Users\owner\git_challenge> git add hello_world.txt
+[main (root-commit) 1c1bd70] hello_world.txtを追加
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello_world.txt
+PS C:\Users\owner\git_challenge> git add hello_world.txt
+PS C:\Users\owner\git_challenge> git commit -m "日本語訳を追記"
+[main 6dc53df] 日本語訳を追記
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\owner\git_challenge> git log --oneline
+6dc53df (HEAD -> main) 日本語訳を追記
+1c1bd70 hello_world.txtを追加
